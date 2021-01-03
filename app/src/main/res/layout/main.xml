@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lvMainChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#C8C1C1"
+        android:layout_margin="1dp"
+        android:dividerHeight="3dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+         <com.google.android.material.textfield.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="5dp"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             app:boxCornerRadiusBottomEnd="5dp"
+             android:layout_gravity="bottom"
+             android:hint="Message"
+             android:layout_weight="1">
+             <EditText
+                 android:id="@+id/etMain"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="bottom"
+                 android:inputType="none" />
+         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            app:cornerRadius="5dp"
+            app:elevation="10dp"
+            android:layout_margin="5dp"
+            app:strokeColor="@android:color/background_dark"
+            app:rippleColor="@android:color/holo_green_dark"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="@string/send" />
+    </LinearLayout>
+
+
+</LinearLayout>
